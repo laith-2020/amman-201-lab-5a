@@ -57,13 +57,32 @@ IMPORTANT DETAIL: You may not use the arithmetic operators + and * in this funct
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testSumAndMultiply() function and see if the test passes.*/
 
 // Write your code here
+
 function sumAndMultiply(a, b, c) { //eslint-disable-line
 
-}
+    // * first way 
+       //  var a1 = a + b + c;
+       // var a2 = a * b *c ;
+        // var msg2 = `${a} and ${b} and ${c} sum to ${a1}.`;
+        // var msg3 = `The product of ${a} and ${b} and ${c} is ${a2}.`;
+         // console.log(msg2+msg3);
+         // return [a1,a2,msg2,msg3];
+    
+    
+     // * second way 
+         var sumAB =sum(a,b).shift();
+        var sumABC =sum(sumAB,c).shift();
+        var msg2 = `${a} and ${b} and ${c} sum to ${sumABC}.`;
+        var multAB = multiply(a, b).shift();
+        var multABC = multiply(multAB, c).shift();
+         var msg3 = `The product of ${a} and ${b} and ${c} is ${multABC}.`;
+        //  console.log(msg2,msg3);
+         return[sumABC,multABC,msg2,msg3];
+     }
 
 // Here is the test for sumAndMultiply(); uncomment it to run it
 // 4,7,5
-// testSumAndMultiply();
+ testSumAndMultiply();
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
